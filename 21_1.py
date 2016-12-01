@@ -22,6 +22,8 @@ def take_card(kol, ruka=0, ruka2=0):
             print('У вас %d очков.' % ruka)
             take_card(kol, ruka, ruka2)
     elif choice == 'n':
+        while ruka2<15:
+            ruka2 += kol.pop()
         print('У вас %d очков и вы закончили игру.' % ruka)
         if ruka > ruka2:
             print('У дилера %d очков.\nВы выиграли!' % ruka2)
